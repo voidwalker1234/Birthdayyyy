@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+dist/
+.npm-cache/
+vite-check-dist/
+
+# Temporary local Vite adapter used only for the preview
+/index.html
+/vite-entry.tsx
+/vite.preview.config.ts
