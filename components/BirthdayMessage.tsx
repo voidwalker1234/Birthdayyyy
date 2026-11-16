@@ -1,14 +1,16 @@
-"use client";
+﻿"use client";
 import { motion } from "framer-motion";
 
 const message = [
-  "Happiest Birthday, Shreyyyyyyyyyyyyy!",
-  "I know it's crazy how I'm there with you on some birthdays and go MIA on others, but hey, this birthday is going to be different!",
-  "I realised that giving you a materialistic gift would be cool, but as you can see, the cosmos is kinda against us (I hope not for long 😭😭). So I made you this virtual whatever-you-call-this lol.",
-  "I know it's nothing crazy, but at least it'll make me a part of your birthday, so the effort is worth it lol.",
-  "Also, I hope your day has good food, lots of cake, and as little stress as humanly possible (we can aim high lol). If this little website makes you smile even once, I’m counting it as a very successful gift.",
-  "Anyways, may you get everything good you deserve and be happy forever and ever and everrrrrrrrrrrrrr!",
-  "And the rest, I guess you know it all 😙",
+  "Happiest birthday, Shreyyyyyyyyyyyyy!",
+  "I know it's crazy that I'm there with you for some birthdays and go MIA for others, but hey, this birthday is going to be different!",
+  "I realised that giving you a materialistic gift would be cool, but, as you can see, the cosmos is kinda against us (I hope not for long 😭😭). So I made you this virtual whatever-you-call-this, lol.",
+  "I know it's nothing crazy, but at least this way, I can be a part of your birthday, so the effort is worth it, lol.",
+  "Also, I hope your day is filled with good food, lots of cake, and as little stress as humanly possible (we can aim high, lol). If this little website makes you smile even once, I'm counting it as a very successful gift.",
+  "I'm so grateful to have you in my life, and I hope it stays that way forever 🤞.",
+  "Anyways, may you get everything good you deserve, and be happy forever and ever and everrrrrrrrrrrrrr!",
+  "Cheers to celebrating all your birthdays together 🥂",
+  "And the rest, I guess you know it all 😘",
 ];
 
 export function BirthdayMessage({ onNext }: { onNext: () => void }) {
@@ -31,3 +33,4 @@ export function BirthdayMessage({ onNext }: { onNext: () => void }) {
     <div className="letter-side-note note-right" aria-hidden="true">✧<br /><span>open<br />whenever<br />you need</span></div>
   </section>;
 }
+
