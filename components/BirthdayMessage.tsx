@@ -7,7 +7,7 @@ const message = [
   "I realised that giving you a materialistic gift would be cool, but, as you can see, the cosmos is kinda against us (I hope not for long 😭😭). So I made you this virtual whatever-you-call-this, lol.",
   "I know it's nothing crazy, but at least this way, I can be a part of your birthday, so the effort is worth it, lol.",
   "Also, I hope your day is filled with good food, lots of cake, and as little stress as humanly possible (we can aim high, lol). If this little website makes you smile even once, I'm counting it as a very successful gift.",
-  "I don't know if you realise just how much better your presence makes my life. I'll always do my very best to never make you sad and to be there for you, always and forever—even when it feels like the whole world isn't. 🤞",
+  "You make my life so much better, you know? I'll always be here for you, even when the whole world's against you. 🤞",
   "Anyways, may you get everything good you deserve, and be happy forever and ever and everrrrrrrrrrrrrr!",
   "Cheers to celebrating all your birthdays together 🥂",
   "And the rest, I guess you know it all 😘",
