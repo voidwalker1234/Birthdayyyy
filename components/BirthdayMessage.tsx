@@ -10,7 +10,7 @@ const message = [
   "i dont think you realise how important you are to me but i just wanna let you know that no matter wat happens i shall always protect you and be there for you no matter wat and that's a promise😉",
   "Anyways, may you get everything good you deserve, and be happy forever and ever and everrrrrrrrrrrrrr!",
   "Cheers to celebrating all your birthdays together 🥂",
-  "And the rest, I guess you know it all 😘",
+  "And the rest, I guess you know it all 😙",
 ];
 
 export function BirthdayMessage({ onNext }: { onNext: () => void }) {
