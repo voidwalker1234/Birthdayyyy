@@ -8,7 +8,7 @@ const message = [
   "It's not much, but I wanted to make sure you still got a little something from me.",
   "I hope your day has lots of good food, plenty of cake, and as little stress as possible. And if this little website makes you smile even once, I'll call it a win.",
   "I don't think you realise how important you are to me, but I just wanna let you know that no matter wat happens, I shall always protect you and be there for you, no matter wat. And that's a promise 😉",
-  "Anyway, I hope this next year brings you all the good things you deserve—and lots of reasons to be happy!",
+  "Anyways, I hope you stay happy forever and ever and everrrrrrrrr, and that you're hella successful and healthy!",
   "Cheers to celebrating all your birthdays together 🥂",
   "And the rest? I think you already know it all 😙",
 ];
