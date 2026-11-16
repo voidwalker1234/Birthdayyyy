@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const message = [
   "Happiest birthday, Shreyyyyyyyyyyyyy!",
-  "I know it's crazy that I'm there with you for some birthdays and go MIA for others, but hey, this birthday is going to be different!",
-  "I realised that giving you a materialistic gift would be cool, but, as you can see, the cosmos is kinda against us (I hope not for long 😭😭). So I made you this virtual whatever-you-call-this, lol.",
-  "I know it's nothing crazy, but at least this way, I can be a part of your birthday, so the effort is worth it, lol.",
-  "Also, I hope your day is filled with good food, lots of cake, and as little stress as humanly possible (we can aim high, lol). If this little website makes you smile even once, I'm counting it as a very successful gift.",
-  "i dont think you realise how important you are to me but i just wanna let you know that no matter wat happens i shall always protect you and be there for you no matter wat and that's a promise😉",
-  "Anyways, may you get everything good you deserve, and be happy forever and ever and everrrrrrrrrrrrrr!",
+  "I know I'm there for some birthdays and then go MIA for others, but this year, I get to be part of yours!",
+  "I wanted to get you something, but the cosmos seems to have other plans (hopefully not for long 😭😭), so I made you this little virtual whatever-this-is instead, lol.",
+  "It's not much, but I wanted to make sure you still got a little something from me.",
+  "I hope your day has lots of good food, plenty of cake, and as little stress as possible. And if this little website makes you smile even once, I'll call it a win.",
+  "I don't think you realise how important you are to me, but I just wanna let you know that no matter wat happens, I shall always protect you and be there for you, no matter wat. And that's a promise 😉",
+  "Anyway, I hope this next year brings you all the good things you deserve—and lots of reasons to be happy!",
   "Cheers to celebrating all your birthdays together 🥂",
-  "And the rest, I guess you know it all 😙",
+  "And the rest? I think you already know it all 😙",
 ];
 
 export function BirthdayMessage({ onNext }: { onNext: () => void }) {
