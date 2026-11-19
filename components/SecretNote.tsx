@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const secretMessage = [
   "Lesgooooooo, u remembered the password 😚",
-  "So this section is actually pretty deep, cause I’ve lost u many times before and it’s been rough ngl. But now that u have come back to me, it feels like life has flipped to the good side again. And like I always say, u feel like home to me, and I absolutely love that.",
+  "So this section is actually a secret only we both can open 😉😉 fun, right!!!! Well, as u know, I’ve lost u many times before because of shitty decisions I made 🥲🥲 and I can’t do anything about the past now other than sit and think about how I could do stuff differently, ugghhhh. But anyways, coming to the present!!! Now that I have u back, it feels like life has flipped to the good side again.",
   "Butttt, we haven’t been talking much lately cause of all the xyz reasons, and it does suck (I should stop being so clingy 😑😑). It is wat it is.",
   "And once again, let me wish u a very happy birthday for the millionth time, and ily more than u can imagine 😙♾️",
 ];
