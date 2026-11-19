@@ -43,13 +43,14 @@ export function FloatingDecorations() {
         element.style.setProperty("--cursor-x", "0px");
         element.style.setProperty("--cursor-y", "0px");
       });
+      sceneRef.current?.style.setProperty("--scene-touch-x", "0px");
+      sceneRef.current?.style.setProperty("--scene-touch-y", "0px");
     };
-    const move = (event: PointerEvent) => {
-      if (event.pointerType !== "mouse") return;
+    const move = (clientX: number, clientY: number) => {
       sceneRef.current?.querySelectorAll<HTMLElement>(".ambient-ornament").forEach((element) => {
         const bounds = element.getBoundingClientRect();
-        const dx = bounds.left + bounds.width / 2 - event.clientX;
-        const dy = bounds.top + bounds.height / 2 - event.clientY;
+        const dx = bounds.left + bounds.width / 2 - clientX;
+        const dy = bounds.top + bounds.height / 2 - clientY;
         const distance = Math.hypot(dx, dy);
         const radius = 165;
         const amount = distance < radius ? (1 - distance / radius) * 12 : 0;
@@ -57,16 +58,34 @@ export function FloatingDecorations() {
         element.style.setProperty("--cursor-x", `${Math.cos(angle) * amount}px`);
         element.style.setProperty("--cursor-y", `${Math.sin(angle) * amount}px`);
       });
+      const scene = sceneRef.current;
+      if (scene) {
+        scene.style.setProperty("--scene-touch-x", `${((clientX / window.innerWidth) - .5) * 14}px`);
+        scene.style.setProperty("--scene-touch-y", `${((clientY / window.innerHeight) - .5) * 10}px`);
+      }
+    };
+    const pointerMove = (event: PointerEvent) => move(event.clientX, event.clientY);
+    const touchMove = (event: TouchEvent) => {
+      const touch = event.touches[0];
+      if (touch) move(touch.clientX, touch.clientY);
     };
     const leave = (event: PointerEvent) => {
       if (!event.relatedTarget) reset();
     };
 
-    window.addEventListener("pointermove", move, { passive: true });
+    window.addEventListener("pointermove", pointerMove, { passive: true });
+    window.addEventListener("touchstart", touchMove, { passive: true });
+    window.addEventListener("touchmove", touchMove, { passive: true });
+    window.addEventListener("touchend", reset, { passive: true });
+    window.addEventListener("touchcancel", reset, { passive: true });
     window.addEventListener("pointerout", leave);
     window.addEventListener("blur", reset);
     return () => {
-      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointermove", pointerMove);
+      window.removeEventListener("touchstart", touchMove);
+      window.removeEventListener("touchmove", touchMove);
+      window.removeEventListener("touchend", reset);
+      window.removeEventListener("touchcancel", reset);
       window.removeEventListener("pointerout", leave);
       window.removeEventListener("blur", reset);
     };

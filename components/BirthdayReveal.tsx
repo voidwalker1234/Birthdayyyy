@@ -30,21 +30,36 @@ export function BirthdayReveal({ mood, showConfetti, onNext }: Props) {
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage || reduce) return;
-    const move = (event: PointerEvent) => {
-      if (event.pointerType !== "mouse") return;
+    const move = (clientX: number, clientY: number) => {
       const bounds = stage.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width - .5;
-      const y = (event.clientY - bounds.top) / bounds.height - .5;
+      const x = (clientX - bounds.left) / bounds.width - .5;
+      const y = (clientY - bounds.top) / bounds.height - .5;
       stage.style.setProperty("--parallax-x", `${(x * 12).toFixed(1)}px`);
       stage.style.setProperty("--parallax-y", `${(y * 9).toFixed(1)}px`);
+    };
+    const pointerMove = (event: PointerEvent) => move(event.clientX, event.clientY);
+    const touchMove = (event: TouchEvent) => {
+      const touch = event.touches[0];
+      if (touch) move(touch.clientX, touch.clientY);
     };
     const reset = () => {
       stage.style.setProperty("--parallax-x", "0px");
       stage.style.setProperty("--parallax-y", "0px");
     };
-    stage.addEventListener("pointermove", move, { passive: true });
+    stage.addEventListener("pointermove", pointerMove, { passive: true });
     stage.addEventListener("pointerleave", reset, { passive: true });
-    return () => { stage.removeEventListener("pointermove", move); stage.removeEventListener("pointerleave", reset); };
+    stage.addEventListener("touchstart", touchMove, { passive: true });
+    stage.addEventListener("touchmove", touchMove, { passive: true });
+    stage.addEventListener("touchend", reset, { passive: true });
+    stage.addEventListener("touchcancel", reset, { passive: true });
+    return () => {
+      stage.removeEventListener("pointermove", pointerMove);
+      stage.removeEventListener("pointerleave", reset);
+      stage.removeEventListener("touchstart", touchMove);
+      stage.removeEventListener("touchmove", touchMove);
+      stage.removeEventListener("touchend", reset);
+      stage.removeEventListener("touchcancel", reset);
+    };
   }, [reduce]);
   return <section className="reveal-page content-card celebration-card">
     <Confetti active={showConfetti} />
