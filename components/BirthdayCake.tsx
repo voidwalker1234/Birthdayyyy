@@ -8,7 +8,7 @@ export function BirthdayCake() {
     className="cake-illustration"
     initial={{ opacity: 0, y: 18, scale: .8 }}
     animate={{ opacity: 1, y: 0, scale: 1 }}
-    transition={{ delay: .95, duration: reduce ? .2 : .55, type: "spring", stiffness: 150, damping: 14 }}
+    transition={{ delay: .95, duration: reduce ? .2 : .7, ease: [.22, 1, .36, 1] }}
     aria-hidden="true"
   >
     <svg viewBox="0 0 200 170" role="presentation">

@@ -51,7 +51,7 @@ function EmbraceWing({ side, hugging, reduce }: { side: "left" | "right"; huggin
           : { opacity: hugging ? 1 : 0, rotate: hugging ? -46 : 0, scale: 1, y: 0 }}
         transition={reduce
           ? { duration: 0 }
-          : { opacity: { duration: 0.18 }, rotate: { type: "spring", stiffness: 120, damping: 13, delay: 0.08 }, scale: { duration: 1.1, repeat: hugging ? Infinity : 0, repeatDelay: 1.5, ease: "easeInOut" }, y: { duration: 1.1, repeat: hugging ? Infinity : 0, repeatDelay: 1.5, ease: "easeInOut" } }}
+          : { opacity: { duration: 0.18 }, rotate: { duration: 0.9, repeat: hugging ? Infinity : 0, repeatDelay: 1.5, ease: "easeInOut", delay: 0.08 }, scale: { duration: 1.1, repeat: hugging ? Infinity : 0, repeatDelay: 1.5, ease: "easeInOut" }, y: { duration: 1.1, repeat: hugging ? Infinity : 0, repeatDelay: 1.5, ease: "easeInOut" } }}
         style={{ transformOrigin: "25px 17px" }}
       >
         <path d="M24 13 C39 3 55 10 68 23 C78 34 86 42 98 49 C107 55 105 66 97 70 C88 75 79 69 70 63 C56 54 48 42 36 36 C31 33 26 32 21 32Z" fill={coat} stroke={edge} strokeWidth="2.5" strokeLinejoin="round" />
